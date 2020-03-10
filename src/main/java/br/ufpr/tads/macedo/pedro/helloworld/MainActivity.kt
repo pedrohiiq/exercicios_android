@@ -2,6 +2,7 @@ package br.ufpr.tads.macedo.pedro.helloworld
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -26,25 +27,33 @@ class MainActivity : AppCompatActivity() {
             val op1 = operando1.text.toString().toIntOrNull()
             val op2 = operando2.text.toString().toIntOrNull()
             val resultado = if (op1 != null && op2 != null) op1?.minus(op2).toString() else msg_input_errado
-            Toast.makeText(this,resultado,Toast.LENGTH_SHORT).show()
+            val toast = Toast.makeText(this,resultado,Toast.LENGTH_SHORT)
+            toast.setGravity(Gravity.TOP, 0, 600)
+            toast.show()
         }
         soma.setOnClickListener {
             val op1 = operando1.text.toString().toIntOrNull()
             val op2 = operando2.text.toString().toIntOrNull()
             val resultado = if (op1 != null && op2 != null) op1?.plus(op2).toString() else msg_input_errado
-            Toast.makeText(this,resultado,Toast.LENGTH_SHORT).show()
+            val toast = Toast.makeText(this,resultado,Toast.LENGTH_SHORT)
+            toast.setGravity(Gravity.TOP, 0, 600)
+            toast.show()
         }
         dividir.setOnClickListener {
             val op1 = operando1.text.toString().toIntOrNull()
             val op2 = operando2.text.toString().toIntOrNull()
             val resultado = if (op1 != null && op2 != null) op1?.div(op2.toFloat()).toString() else msg_input_errado
-            Toast.makeText(this,resultado,Toast.LENGTH_SHORT).show()
+            val toast = Toast.makeText(this,resultado,Toast.LENGTH_SHORT)
+            toast.setGravity(Gravity.TOP, 0, 600)
+            toast.show()
         }
         multiplicar.setOnClickListener {
             val op1 = operando1.text.toString().toIntOrNull()
             val op2 = operando2.text.toString().toIntOrNull()
             val resultado = if (op1 != null && op2 != null) op1?.times(op2).toString() else msg_input_errado
-            Toast.makeText(this,resultado,Toast.LENGTH_SHORT).show()
+            val toast = Toast.makeText(this,resultado,Toast.LENGTH_SHORT)
+            toast.setGravity(Gravity.TOP, 0, 600)
+            toast.show()
         }
 
     }
